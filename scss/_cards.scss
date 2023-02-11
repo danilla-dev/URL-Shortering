@@ -1,0 +1,65 @@
+.cards {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.cyan-line {
+		position: absolute;
+		width: 10px;
+		height: 70%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $Cyan;
+		z-index: -100;
+	}
+	.card {
+		position: relative;
+		width: 100%;
+		max-width: 500px;
+		padding: 8em 3em 3em 3em;
+		margin-bottom: 10em;
+		border-radius: 10px;
+		background-color: #fff;
+		h3 {
+			font-weight: 700;
+			font-size: 2.5rem;
+			text-align: center;
+		}
+		p {
+			margin-top: 1em;
+			font-size: 1.6em;
+			font-weight: 500;
+			text-align: center;
+			color: $Grayish-Violet;
+		}
+		.circle-img {
+			position: absolute;
+			height: 90px;
+			width: 90px;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			background-color: $Dark-Violet;
+			background-size: 0.2;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.brand-recognition-card {
+		.circle-img {
+			background-image: url('../images/icon-brand-recognition.svg');
+		}
+	}
+	.detailed-records-card {
+		.circle-img {
+			background-image: url('../images/icon-detailed-records.svg');
+		}
+	}
+	.fully-customizable-card {
+		.circle-img {
+			background-image: url('../images/icon-fully-customizable.svg');
+		}
+	}
+}

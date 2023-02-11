@@ -1,0 +1,39 @@
+.shorten-results-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin-top: 10em;
+	.shorten-result-window {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 100%;
+		width: calc(90% + 3em);
+		padding: 2em;
+		margin-top: 3em;
+		border-radius: 10px;
+		background-color: #fff;
+		.original {
+			margin: 0.5em 0;
+			border-bottom: 1px solid black;
+			.original-link {
+				height: 30px;
+				font-size: 1.8rem;
+				font-weight: 500;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				color: black;
+			}
+		}
+		.result {
+			margin: 0.5em 0;
+			.result-link {
+				font-size: 1.8rem;
+				font-weight: 500;
+				color: $Cyan;
+			}
+		}
+	}
+}

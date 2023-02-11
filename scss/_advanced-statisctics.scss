@@ -1,0 +1,58 @@
+.advanced-statisctics {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2em;
+	background-color: #ececec;
+	z-index: 1;
+
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 90%;
+		transform: translate(-50%, -50%);
+		padding: 2.5em;
+		border-radius: 10px;
+		background-color: $Dark-Violet;
+		background-image: url('/images/bg-shorten-mobile.svg');
+		background-size: 1;
+		background-position: right 0 top 0;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		z-index: 20;
+		input {
+			width: 100%;
+			padding: 0.7em;
+			margin-bottom: .5em;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.8rem;
+		}
+		.error {
+			font-size: 1.2rem;
+			font-weight: 400;
+			font-style: italic;
+			color: $Red;
+		}
+	}
+
+	.advanced-statistics-text {
+		margin-top: 10em;
+		h2 {
+			font-size: 3rem;
+			text-align: center;
+		}
+		p {
+			margin: 1em 0 5em 0;
+			font-size: 1.8rem;
+			text-align: center;
+			color: $Grayish-Violet;
+			font-weight: 500;
+		}
+	}
+}

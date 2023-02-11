@@ -1,0 +1,63 @@
+//WINDOW
+.menu-window {
+	position: absolute;
+	top: 80px;
+	left: 150%;
+	width: 90%;
+	max-width: 500px;
+	padding: 2em;
+	border-radius: 20px;
+	transform: translateX(-50%);
+	background-color: $Dark-Violet;
+	text-align: center;
+	transition: left 1s;
+	ul {
+		list-style: none;
+		li {
+			padding: 1.5em;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+	.menu-list-window {
+		margin-bottom: 1em;
+		li {
+			a {
+				font-size: 1.8rem;
+				font-weight: 700;
+				color: #ffff;
+			}
+		}
+	}
+	.account-list-window {
+		border-top: 1px solid $Gray;
+	}
+}
+
+//BAR
+.menu-list-bar,
+.account-list-bar {
+	position: absolute;
+	display: none;
+	top: 0;
+	list-style: none;
+	li {
+		font-size: 1.8rem;
+		font-weight: 500;
+		list-style: none;
+		a {
+			padding: 0.5em;
+			color: $Gray;
+			text-decoration: none;
+		}
+	}
+}
+.account-list-bar {
+	margin-top: 1.5em;
+	right: 0;
+}
+.menu-list-bar {
+	margin-top: 2em;
+	left: 150px;
+}

@@ -1,0 +1,63 @@
+button:hover {
+	background-color: $Cyan-hover;
+}
+.shorten-btn:hover {
+	background-color: $Cyan-hover;
+}
+.get-startet-btn {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 1em 2em;
+	border: none;
+	border-radius: 50px;
+	color: #ffff;
+	font-size: 1.8rem;
+	font-weight: 700;
+	background-color: $Cyan;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+.copy-btn {
+	padding: 0.5em;
+	margin: 0.5em 0;
+	border: none;
+	border-radius: 10px;
+	font-weight: 700;
+	font-size: 1.8rem;
+	background-color: $Cyan;
+	color: #fff;
+	transition: background-color 0.3s;
+}
+
+.shorten-btn {
+	width: 100%;
+	padding: 1em;
+	margin-top: .5em;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.8em;
+	font-weight: 700;
+	background-color: $Cyan;
+	color: #ffff;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+.login-btn {
+	padding: .5em 1em;
+	background-color: transparent;
+	border: none;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #fff;
+}
+.signup-btn {
+	width: 100%;
+	padding: 0.5em 1em;
+	border: none;
+	border-radius: 50px;
+	font-size: 2rem;
+	font-weight: 700;
+	background-color: $Cyan;
+	color: #fff;
+}
