@@ -9,6 +9,8 @@ const resultContainer = document.querySelector('.shorten-results-container')
 const regExpURl =
 	/^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/
 
+let objectsArray = []
+
 const copyLink = e => {
 	if (e.target.tagName === 'BUTTON') {
 		const shortenLink = e.target.previousElementSibling.textContent
@@ -46,9 +48,10 @@ const createElement = (short, orginal) => {
 	newWindow.append(copyBtn)
 	orginalLinkDiv.append(orginalLinkText)
 	resultLinkDiv.append(resultLinkText)
-
 	resultContainer.prepend(newWindow)
 	newWindow.addEventListener('click', copyLink)
+
+	localStorage.setItem('Your links', resultContainer.innerHTML)
 }
 
 const getShortenURL = url => {
@@ -81,4 +84,9 @@ const shortURL = e => {
 	e.preventDefault()
 	checkURL(input.value)
 }
+
 shortenBtn.addEventListener('click', shortURL)
+window.addEventListener('DOMContentLoaded', () => {
+	let localLinks = localStorage.getItem('Your links')
+	resultContainer.innerHTML = localLinks
+})
