@@ -95,11 +95,11 @@ header .nav-background {
   width: 100%;
   padding: 0.7em;
   margin-bottom: 0.5em;
-  border: none;
   border-radius: 5px;
   font-size: 1.8rem;
 }
 .advanced-statisctics form .error {
+  display: none;
   font-size: 1.2rem;
   font-weight: 400;
   font-style: italic;
@@ -433,6 +433,20 @@ button:hover {
   left: 50%;
 }
 
+.input-error input {
+  border: 2px solid hsl(0deg, 87%, 67%);
+}
+.input-error input::-moz-placeholder {
+  color: hsl(0deg, 87%, 67%);
+}
+.input-error input::placeholder {
+  color: hsl(0deg, 87%, 67%);
+}
+
+.copied {
+  background-color: hsl(257deg, 27%, 26%);
+}
+
 @media (min-width: 576px) {
   header .header-img {
     justify-content: center;
@@ -514,8 +528,14 @@ button:hover {
     width: 100%;
   }
   .shorten-results-container .shorten-result-window .original {
-    width: 40%;
+    width: 50%;
     border: none;
+  }
+  .shorten-results-container .shorten-result-window .result {
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 40%;
+    margin-right: 10px;
   }
   .advanced-statisctics {
     padding: 3em;
@@ -653,7 +673,7 @@ button:hover {
     width: calc(1200px - 6em);
   }
   .shorten-results-container .shorten-result-window .original {
-    width: unset;
+    width: 70%;
   }
   .menu-list-bar {
     left: 230px;
@@ -670,6 +690,7 @@ button:hover {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {

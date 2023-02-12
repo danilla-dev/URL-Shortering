@@ -1,3 +1,15 @@
 .show-menu {
 	left: 50%;
 }
+
+.input-error {
+	input {
+		border: 2px solid $Red;
+	}
+	input::placeholder {
+		color: $Red;
+	}
+}
+.copied {
+	background-color: $Dark-Violet;
+}

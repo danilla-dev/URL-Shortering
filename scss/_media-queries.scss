@@ -89,8 +89,14 @@
 			align-items: center;
 			width: 100%;
 			.original {
-				width: 40%;
+				width: 50%;
 				border: none;
+			}
+			.result {
+				display: inline-flex;
+				justify-content: flex-end;
+				width: 40%;
+				margin-right: 10px;
 			}
 		}
 	}
@@ -239,7 +245,7 @@
 		width: calc(1200px - 6em);
 		.shorten-result-window {
 			.original {
-				width: unset;
+				width: 70%;
 			}
 		}
 	}
