@@ -376,7 +376,7 @@ button:hover {
   transform: translateX(-50%);
   background-color: hsl(257deg, 27%, 26%);
   text-align: center;
-  transition: left 0.3;
+  transition: left 0.5s;
 }
 .menu-window ul {
   list-style: none;
