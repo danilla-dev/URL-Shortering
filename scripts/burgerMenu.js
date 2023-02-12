@@ -6,3 +6,9 @@ const showBurgerMenu = () => {
 }
 
 burgerBtn.addEventListener('click', showBurgerMenu)
+
+window.addEventListener('resize', () => {
+	if (window.innerWidth > 767) {
+		menuWindow.classList.remove('show-menu')
+	}
+})

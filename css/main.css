@@ -368,7 +368,7 @@ button:hover {
 .menu-window {
   position: absolute;
   top: 80px;
-  left: 150%;
+  left: 155%;
   width: 90%;
   max-width: 500px;
   padding: 2em;
@@ -376,7 +376,7 @@ button:hover {
   transform: translateX(-50%);
   background-color: hsl(257deg, 27%, 26%);
   text-align: center;
-  transition: left 1s;
+  transition: left 0.3;
 }
 .menu-window ul {
   list-style: none;
@@ -471,6 +471,10 @@ button:hover {
   }
   header nav .nav-background .nav-bar .logo img {
     height: 45px;
+  }
+  header nav .menu-window {
+    display: none;
+    left: 150%;
   }
   header .header-container {
     margin-top: 70px;

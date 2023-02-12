@@ -2,7 +2,7 @@
 .menu-window {
 	position: absolute;
 	top: 80px;
-	left: 150%;
+	left: 155%;
 	width: 90%;
 	max-width: 500px;
 	padding: 2em;
@@ -10,7 +10,7 @@
 	transform: translateX(-50%);
 	background-color: $Dark-Violet;
 	text-align: center;
-	transition: left 1s;
+	transition: left 0.3;
 	ul {
 		list-style: none;
 		li {
