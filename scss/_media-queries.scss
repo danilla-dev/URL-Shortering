@@ -29,6 +29,7 @@
 @media (min-width: 768px) {
 	header {
 		nav {
+			height: calc(70px + 4em);
 			.nav-background {
 				height: calc(70px + 4em);
 				.nav-bar {
@@ -102,6 +103,8 @@
 	}
 	.advanced-statisctics {
 		padding: 3em;
+		background-image: url('../Wave.svg');
+
 		form {
 			flex-direction: row;
 			flex-wrap: wrap;

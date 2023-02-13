@@ -13,3 +13,15 @@
 .copied {
 	background-color: $Dark-Violet;
 }
+.signup-section {
+	form {
+		.form-box.form-error {
+			.error {
+				display: block;
+			}
+			input {
+				border: 2px solid $Red;
+			}
+		}
+	}
+}

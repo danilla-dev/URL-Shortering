@@ -2,6 +2,9 @@ header {
   width: 100%;
   margin-bottom: 20em;
 }
+header nav {
+  height: 70px;
+}
 header nav .nav-bar {
   position: fixed;
   top: 0;
@@ -83,6 +86,7 @@ header .nav-background {
   transform: translate(-50%, -50%);
   padding: 2.5em;
   border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
   background-color: hsl(257deg, 27%, 26%);
   background-image: url("/images/bg-shorten-mobile.svg");
   background-size: 1;
@@ -447,6 +451,75 @@ button:hover {
   background-color: hsl(257deg, 27%, 26%);
 }
 
+.signup-section form .form-box.form-error .error {
+  display: block;
+}
+.signup-section form .form-box.form-error input {
+  border: 2px solid hsl(0deg, 87%, 67%);
+}
+
+.signup-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../Wave-sm1.svg");
+  background-size: cover;
+  background-position: center;
+}
+.signup-section .signup-section-text {
+  padding: 2em 1em;
+  text-align: center;
+}
+.signup-section .signup-section-text h1 {
+  font-size: 3.4rem;
+}
+.signup-section .signup-section-text p {
+  color: hsl(255deg, 11%, 22%);
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.signup-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  margin: 4em;
+}
+.signup-section form .form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 1em 0;
+}
+.signup-section form .form-box label {
+  margin: 0.2em 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.signup-section form .form-box input {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-size: 1.8rem;
+}
+.signup-section form .form-box .error {
+  display: none;
+  color: hsl(0deg, 87%, 67%);
+  font-size: 1.4rem;
+  font-style: italic;
+}
+.signup-section form .signup-submit-btn {
+  padding: 1em 2em;
+  margin-top: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(180deg, 66%, 49%);
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
 @media (min-width: 576px) {
   header .header-img {
     justify-content: center;
@@ -470,6 +543,9 @@ button:hover {
   }
 }
 @media (min-width: 768px) {
+  header nav {
+    height: calc(70px + 4em);
+  }
   header nav .nav-background {
     height: calc(70px + 4em);
   }
@@ -539,6 +615,7 @@ button:hover {
   }
   .advanced-statisctics {
     padding: 3em;
+    background-image: url("../Wave.svg");
   }
   .advanced-statisctics form {
     flex-direction: row;
