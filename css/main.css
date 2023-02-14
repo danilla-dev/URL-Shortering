@@ -259,7 +259,7 @@ button:hover {
   color: #fff;
 }
 
-.signup-btn {
+.signup-btn, .logout-btn {
   width: 100%;
   padding: 0.5em 1em;
   border: none;
@@ -401,6 +401,11 @@ button:hover {
 }
 .menu-window .account-list-window {
   border-top: 1px solid hsl(0deg, 0%, 75%);
+}
+.menu-window .account-list-window li p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
 }
 
 .menu-list-bar,
@@ -673,14 +678,28 @@ button:hover {
     left: 200px;
   }
   .account-list-bar {
-    margin-top: 1.8em;
+    margin-top: 2em;
     margin-right: 1em;
+  }
+  .account-list-bar li p {
+    display: inline-block;
+    margin: 0.4em 1.5em 0 0;
+    color: hsl(255deg, 11%, 22%);
+    font-weight: 700;
+  }
+  .account-list-bar li .fa-solid {
+    display: inline-block;
+    margin-right: 0.5em;
+    text-align: center;
+    color: hsl(180deg, 66%, 49%);
+    font-size: 3rem;
   }
   .login-btn {
     font-size: 1.8rem;
     color: hsl(0deg, 0%, 75%);
   }
-  .signup-btn {
+  .signup-btn,
+  .logout-btn {
     width: unset;
     margin-right: 1em;
     font-size: 1.8rem;

@@ -1,5 +1,6 @@
-localStorage.setItem('status', 'false')
-localStorage.setItem('users', `{ "username":"unknown" , "email":"unknown", "password":"unknown" }`)
+import './setCurrentMenu.js'
+import './logout.js'
+import './accounts.js'
 import './createElement.js'
 import './burgerMenu.js'
 import './getStartedBtns.js'

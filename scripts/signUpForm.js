@@ -10,15 +10,19 @@ const emailRegExp =
 // LINK TO PASS REGEXP https://www.thepolyglotdeveloper.com/2015/05/use-regex-to-test-password-strength-in-javascript/
 //
 
-let users =
-	'{ "users" : [{ "username":"John" , "email":"Doe", "password":"12345678" },{ "username":"John" , "email":"Doe", "password":"12345678" }]}'
 
-const addNewUser = () => {
+const clearForm = () => {
+	inputs.forEach(input => {
+		input.value = ''
+	})
+}
+
+const addNewUser = (username, email, password) => {
 	// get all users from local storage
 	let usersMemory = localStorage.getItem('users')
 
 	//create new user
-	const newUser = `{ "username":"Wikisiki" , "email":"tomczakowa.love.pl", "password":"123jebacpsy" }`
+	const newUser = `{ "username":"${username}" , "email":"${email}", "password":"${password}", "links":" ", "status": "true" }`
 
 	// add new user to all users in local storage
 	usersMemory = usersMemory.concat(',', newUser)
@@ -26,17 +30,18 @@ const addNewUser = () => {
 
 	//add all users from localstorage to text json format in local storage
 	let allUsersJson = `{ "users":[${usersMemory}]}`
-	localStorage.setItem('test0000', allUsersJson)
+	localStorage.setItem('allUsersJson', allUsersJson)
+	localStorage.setItem('status', 'true')
 
-	//get json object from local storage with all users
-	const usersJson = JSON.parse(localStorage.getItem('test0000'))
-	console.log(usersJson)
+	
+	location.href = "../index.html"
+	clearForm()
 }
 
 const countErrors = () => {
 	const errorsCount = document.querySelectorAll('.form-error').length
 	if (errorsCount === 0) {
-		addNewUser()
+		addNewUser(username.value, email.value, password.value)
 	}
 }
 const checkPasswords = (pass1, pass2) => {
@@ -71,12 +76,18 @@ const checkForm = input => {
 		clearError(input)
 	}
 }
+const checkEmail = email => {
+	if (!emailRegExp.test(email.value)) {
+		showError(email, 'Incorrect format of email adress')
+	}
+}
 
 submitBtn.addEventListener('click', e => {
 	e.preventDefault()
 	inputs.forEach(input => {
 		checkForm(input)
 	})
+	checkEmail(email)
 	checkLength(username, 5)
 	checkLength(password, 8)
 	checkPasswords(password, rePass)

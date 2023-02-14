@@ -32,6 +32,15 @@
 	}
 	.account-list-window {
 		border-top: 1px solid $Gray;
+		
+			li {
+				p {
+					font-size: 1.8rem;
+					font-weight: 700;
+					color: #ffff;
+				}
+			}
+		
 	}
 }
 

@@ -3,7 +3,6 @@ const input = document.querySelector('input')
 const form = document.querySelector('form')
 const shortenBtn = document.querySelector('.shorten-btn')
 const error = document.querySelector('.error')
-
 const resultContainer = document.querySelector('.shorten-results-container')
 
 const regExpURl =
@@ -45,14 +44,13 @@ const checkLogedStatus = url => {
 	let status = localStorage.getItem('status')
 	if (status === 'true') {
 		checkURLCount(100000000, url)
-		console.log('jestes zalogowany')
 	} else {
 		checkURLCount(5, url)
 	}
 }
 const checkURLCount = (limit, url) => {
 	let URlCount = document.querySelectorAll('.shorten-result-window').length
-	if (URlCount === limit) {
+	if (URlCount >= limit) {
 		alert('If you want short more links please signUp or login')
 	} else {
 		getShortenURL(url)
@@ -101,8 +99,6 @@ const createElement = (short, orginal) => {
 
 	localStorage.setItem('Your links', resultContainer.innerHTML)
 }
-
-
 
 const shortURL = e => {
 	e.preventDefault()
