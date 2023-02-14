@@ -103,7 +103,7 @@
 	}
 	.advanced-statisctics {
 		padding: 3em;
-		background-image: url('../Wave.svg');
+		background-image: url('../images/advanced-stat-lg.svg');
 
 		form {
 			flex-direction: row;
@@ -170,16 +170,9 @@
 		li {
 			p {
 				display: inline-block;
-				margin: 0.4em 1.5em 0 0;
+				margin: 0.3em 1.5em 0 0;
 				color: $Very-Dark-Blue;
 				font-weight: 700;
-			}
-			.fa-solid {
-				display: inline-block;
-				margin-right: 0.5em;
-				text-align: center;
-				color: $Cyan;
-				font-size: 3rem;
 			}
 		}
 	}
@@ -196,6 +189,7 @@
 		font-weight: 700;
 	}
 	.signup-section {
+		background-image: url('../images/advanced-stat-lg.svg');
 		.signup-section-text {
 			width: 50%;
 			h1 {

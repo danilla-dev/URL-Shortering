@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-image: url('../Wave-sm1.svg');
+	background-image: url('../images/advanced-stat-sm.svg');
 	background-size: cover;
 	background-position: center;
 	.signup-section-text {
@@ -24,13 +24,16 @@
 		justify-content: space-around;
 		width: 90%;
 		margin: 4em;
+		padding: 2em;
+		border-radius: 20px;
+		background-color: #ffffff;
 		.form-box {
 			display: flex;
 			flex-direction: column;
 			justify-content: start;
 			margin: 1em 0;
 			label {
-				margin: 0.2em 0;
+				margin: 0.2em 0 0 0.2em;
 				font-size: 1.8rem;
 				font-weight: 500;
 			}
@@ -40,8 +43,12 @@
 				border: 1px solid rgba(0, 0, 0, 0.4);
 				font-size: 1.8rem;
 			}
+			input:focus {
+				border: 1px solid rgba(0, 0, 0, 0.4);
+			}
 			.error {
 				display: none;
+				margin-left: 0.2em;
 				color: $Red;
 				font-size: 1.4rem;
 				font-style: italic;
@@ -49,7 +56,7 @@
 		}
 		.signup-submit-btn {
 			padding: 1em 2em;
-			margin-top: 1em;
+			margin: 1em 0;
 			border: none;
 			border-radius: 10px;
 			background-color: $Cyan;

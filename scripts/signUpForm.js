@@ -10,7 +10,6 @@ const emailRegExp =
 // LINK TO PASS REGEXP https://www.thepolyglotdeveloper.com/2015/05/use-regex-to-test-password-strength-in-javascript/
 //
 
-
 const clearForm = () => {
 	inputs.forEach(input => {
 		input.value = ''
@@ -33,8 +32,7 @@ const addNewUser = (username, email, password) => {
 	localStorage.setItem('allUsersJson', allUsersJson)
 	localStorage.setItem('status', 'true')
 
-	
-	location.href = "../index.html"
+	location.href = '/index.html'
 	clearForm()
 }
 

@@ -31,14 +31,9 @@ const createButtons = (element, nick) => {
 	logoutLi.append(logoutBtn)
 
 	const nicnameText = document.createElement('p')
-	const userIcon = document.createElement('i')
-	userIcon.classList.add('fa-solid', 'fa-circle-user')
-	nicnameText.classList.add('menu-nick')
 	nicnameText.textContent = nick
-	nicknameLi.append(userIcon)
+	nicnameText.classList.add('menu-nick')
 	nicknameLi.append(nicnameText)
-
-
 
 	element.append(nicknameLi)
 	element.append(logoutLi)

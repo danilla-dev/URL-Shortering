@@ -73,6 +73,9 @@ header .nav-background {
   align-items: center;
   padding: 2em;
   background-color: #ececec;
+  background-image: url("../images/advanced-stat-sm.svg");
+  background-size: cover;
+  background-position: center;
   z-index: 1;
 }
 .advanced-statisctics form {
@@ -468,7 +471,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../Wave-sm1.svg");
+  background-image: url("../images/advanced-stat-sm.svg");
   background-size: cover;
   background-position: center;
 }
@@ -490,6 +493,9 @@ button:hover {
   justify-content: space-around;
   width: 90%;
   margin: 4em;
+  padding: 2em;
+  border-radius: 20px;
+  background-color: #ffffff;
 }
 .signup-section form .form-box {
   display: flex;
@@ -498,7 +504,7 @@ button:hover {
   margin: 1em 0;
 }
 .signup-section form .form-box label {
-  margin: 0.2em 0;
+  margin: 0.2em 0 0 0.2em;
   font-size: 1.8rem;
   font-weight: 500;
 }
@@ -508,15 +514,19 @@ button:hover {
   border: 1px solid rgba(0, 0, 0, 0.4);
   font-size: 1.8rem;
 }
+.signup-section form .form-box input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
 .signup-section form .form-box .error {
   display: none;
+  margin-left: 0.2em;
   color: hsl(0deg, 87%, 67%);
   font-size: 1.4rem;
   font-style: italic;
 }
 .signup-section form .signup-submit-btn {
   padding: 1em 2em;
-  margin-top: 1em;
+  margin: 1em 0;
   border: none;
   border-radius: 10px;
   background-color: hsl(180deg, 66%, 49%);
@@ -620,7 +630,7 @@ button:hover {
   }
   .advanced-statisctics {
     padding: 3em;
-    background-image: url("../Wave.svg");
+    background-image: url("../images/advanced-stat-lg.svg");
   }
   .advanced-statisctics form {
     flex-direction: row;
@@ -683,16 +693,9 @@ button:hover {
   }
   .account-list-bar li p {
     display: inline-block;
-    margin: 0.4em 1.5em 0 0;
+    margin: 0.3em 1.5em 0 0;
     color: hsl(255deg, 11%, 22%);
     font-weight: 700;
-  }
-  .account-list-bar li .fa-solid {
-    display: inline-block;
-    margin-right: 0.5em;
-    text-align: center;
-    color: hsl(180deg, 66%, 49%);
-    font-size: 3rem;
   }
   .login-btn {
     font-size: 1.8rem;
@@ -704,6 +707,9 @@ button:hover {
     margin-right: 1em;
     font-size: 1.8rem;
     font-weight: 700;
+  }
+  .signup-section {
+    background-image: url("../images/advanced-stat-lg.svg");
   }
   .signup-section .signup-section-text {
     width: 50%;
