@@ -6,5 +6,5 @@ export const logout = () => {
 	})
 	localStorage.setItem('status', 'false')
 	localStorage.setItem('allUsersJson', JSON.stringify(users))
-	location.href = './'
+	location.replace()
 }
