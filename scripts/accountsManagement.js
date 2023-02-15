@@ -34,4 +34,6 @@ const setDefaultUser = () => {
 	}
 }
 
+
+
 window.addEventListener('DOMContentLoaded', setDefaultUser)
