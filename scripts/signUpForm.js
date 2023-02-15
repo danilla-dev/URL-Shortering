@@ -35,6 +35,7 @@ const addNewUser = (username, email, password) => {
 	
 	location.href = './'
 	clearForm()
+	
 }
 
 const countErrors = () => {
