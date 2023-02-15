@@ -28,10 +28,6 @@ const addNewUser = (username, email, password) => {
 	localStorage.setItem('allUsersJson', allUsersJson)
 	localStorage.setItem('status', 'true')
 
-<<<<<<< HEAD
-=======
-	
->>>>>>> c21377e4f2a60d31af16235fb7adae97077dc19b
 	location.href = './'
 	clearForm()
 	
