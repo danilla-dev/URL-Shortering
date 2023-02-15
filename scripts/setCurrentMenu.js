@@ -1,27 +1,17 @@
-import { logout } from './logout.js'
+import { logout, findLoggedUser } from './accountsManagement.js'
 const accUl = document.querySelectorAll('.acc-ul')
 const menusLi = document.querySelectorAll('.acc-ul li')
 const menuListWindow = document.querySelector('.account-list-window')
 const menuListBar = document.querySelector('.account-list-bar')
-
-let loggedUser = ''
-
-const findLoggedUser = () => {
-	const users = JSON.parse(localStorage.getItem('allUsersJson')).users
-	console.log(users)
-	users.forEach(user => {
-		if (user.status == 'true') {
-			loggedUser = user
-		}
-	})
-}
+ 
+let loggedUser = findLoggedUser()
 
 const deleteButtons = () => {
 	menusLi.forEach(li => {
 		li.remove()
 	})
 }
-const createButtons = (element, nick) => {
+const createButtons = element => {
 	const logoutLi = document.createElement('li')
 	const nicknameLi = document.createElement('li')
 
@@ -31,7 +21,7 @@ const createButtons = (element, nick) => {
 	logoutLi.append(logoutBtn)
 
 	const nicnameText = document.createElement('p')
-	nicnameText.textContent = nick
+	nicnameText.textContent = loggedUser.username
 	nicnameText.classList.add('menu-nick')
 	nicknameLi.append(nicnameText)
 
@@ -41,12 +31,11 @@ const createButtons = (element, nick) => {
 	logoutBtn.addEventListener('click', logout)
 }
 
-const checkLogedStatus = () => {
+const createCurrentMenu = () => {
 	if (localStorage.getItem('status') == 'true') {
 		deleteButtons()
-		findLoggedUser()
 		accUl.forEach(ul => {
-			createButtons(ul, loggedUser.username)
+			createButtons(ul)
 		})
 	} else {
 		menuListWindow.innerHTML = `
@@ -61,4 +50,4 @@ const checkLogedStatus = () => {
 	}
 }
 
-window.addEventListener('DOMContentLoaded', checkLogedStatus)
+window.addEventListener('DOMContentLoaded', createCurrentMenu)

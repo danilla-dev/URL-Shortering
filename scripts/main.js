@@ -1,6 +1,5 @@
 import './setCurrentMenu.js'
-import './logout.js'
-import './accounts.js'
+import './accountsManagement.js'
 import './createElement.js'
 import './burgerMenu.js'
 import './getStartedBtns.js'

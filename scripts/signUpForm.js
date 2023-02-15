@@ -17,22 +17,18 @@ const clearForm = () => {
 }
 
 const addNewUser = (username, email, password) => {
-	// get all users from local storage
 	let usersMemory = localStorage.getItem('users')
 
-	//create new user
 	const newUser = `{ "username":"${username}" , "email":"${email}", "password":"${password}", "links":" ", "status": "true" }`
 
-	// add new user to all users in local storage
 	usersMemory = usersMemory.concat(',', newUser)
 	localStorage.setItem('users', usersMemory)
 
-	//add all users from localstorage to text json format in local storage
 	let allUsersJson = `{ "users":[${usersMemory}]}`
 	localStorage.setItem('allUsersJson', allUsersJson)
 	localStorage.setItem('status', 'true')
 
-	location.href = '/index.html'
+	location.href = './'
 	clearForm()
 }
 
