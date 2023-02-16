@@ -17,20 +17,15 @@ const clearForm = () => {
 }
 
 const addNewUser = (username, email, password) => {
-	let usersMemory = localStorage.getItem('users')
+	const newUser = `{ "username":"${username}" , "email":"${email}", "password":"${password}", "links":[], "status": "true" }`
 
-	const newUser = `{ "username":"${username}" , "email":"${email}", "password":"${password}", "links":" ", "status": "true" }`
-
-	usersMemory = usersMemory.concat(',', newUser)
-	localStorage.setItem('users', usersMemory)
-
-	let allUsersJson = `{ "users":[${usersMemory}]}`
-	localStorage.setItem('allUsersJson', allUsersJson)
+	let allUsersJson = JSON.parse(localStorage.getItem('allUsersJson')).users
+	allUsersJson.push(JSON.parse(newUser))
+	localStorage.setItem('allUsersJson', `{"users":${JSON.stringify(allUsersJson)}}`)
 	localStorage.setItem('status', 'true')
 
 	location.href = './'
 	clearForm()
-	
 }
 
 const countErrors = () => {
@@ -87,5 +82,4 @@ submitBtn.addEventListener('click', e => {
 	checkLength(password, 8)
 	checkPasswords(password, rePass)
 	countErrors()
-	// saveUser()
 })

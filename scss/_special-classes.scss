@@ -13,7 +13,8 @@
 .copied {
 	background-color: $Dark-Violet;
 }
-.signup-section {
+.signup-section,
+.login-section {
 	form {
 		.form-box.form-error {
 			.error {

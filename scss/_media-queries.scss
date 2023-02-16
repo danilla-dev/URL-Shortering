@@ -188,9 +188,11 @@
 		font-size: 1.8rem;
 		font-weight: 700;
 	}
-	.signup-section {
+	.signup-section,
+	.login-section {
 		background-image: url('../images/advanced-stat-lg.svg');
-		.signup-section-text {
+		.signup-section-text,
+		.login-section-text {
 			width: 50%;
 			h1 {
 				font-size: 4.4rem;
@@ -202,6 +204,9 @@
 		form {
 			width: 50%;
 			max-width: 500px;
+		}
+		.login-section-text{
+			width: 55%;
 		}
 	}
 }

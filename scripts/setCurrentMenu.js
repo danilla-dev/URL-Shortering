@@ -39,12 +39,12 @@ const createCurrentMenu = () => {
 		})
 	} else {
 		menuListWindow.innerHTML = `
-        <li><button class="login-btn acc-btn">Login</button></li>
+        <li><a href="login.html"><button class="login-btn acc-btn">Login</button></a></li>
         <li><a href="signUp.html" class="signup-link"><button class=" signup-btn acc-btn">Sign Up</button></a>
         </li>
         `
 		menuListBar.innerHTML = `
-        <li><button class="login-btn acc-btn">Login</button></li>
+        <li><a href="login.html"><button class="login-btn acc-btn">Login</button></a></li>
         <li><a href="signUp.html" class="signup-link"><button class="signup-btn acc-btn">Sign Up</button></a></li>
         `
 	}

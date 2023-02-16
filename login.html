@@ -45,7 +45,9 @@
                                 </a></li>
                         </ul>
                         <ul class="account-list-bar">
-                            <li><a href="login.html"><button class="login-btn">Login</button></a></li>
+                            <li><a href="signUp.html" class="signup-link"><button class=" signup-btn acc-btn">Sign
+                                        Up</button></a>
+                            </li>
                         </ul>
                         <div class="menu-window">
                             <ul class="menu-list-window">
@@ -60,7 +62,9 @@
                                     </a></li>
                             </ul>
                             <ul class="account-list-window">
-                                <li><a href="login.html"><button class="login-btn">Login</button></a></li>
+                                <li><a href="signUp.html" class="signup-link"><button class=" signup-btn acc-btn">Sign
+                                            Up</button></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -70,23 +74,15 @@
     </header>
 
     <main>
-        <div class="signup-section">
-            <div class="signup-section-text wrapper">
-                <h1>Join us!</h1>
-                <p>By joining us you gain access to the best community and unlimited shortlinks absolutely for free.</p>
+        <div class="login-section">
+            <div class="login-section-text wrapper">
+                <h1>Come back to us!</h1>
             </div>
             <form class="wrapper">
-
                 <div class="form-box">
-                    <label for="email">E-mail adress: </label>
+                    <label for="email">E-mail adress/Username:</label>
                     <input id="email" class="email" type="text" placeholder="Enter the e-mail adress">
                     <p class="error">error</p>
-                </div>
-
-                <div class="form-box">
-                    <label for="username">Username: </label>
-                    <input id="username" class="username" type="text" placeholder="Enter the username">
-                    <p class=" error">error</p>
                 </div>
 
                 <div class="form-box">
@@ -94,17 +90,7 @@
                     <input id="password" class="password" type="password" placeholder="Enter the password">
                     <p class="error">error</p>
                 </div>
-
-                <div class="form-box">
-                    <label for="repeat-password">Repeat password: </label>
-                    <input id="repeat-password" class="repeat-password" type="password"
-                        placeholder="Repeat the password">
-                    <p class="error">error</p>
-                </div>
-
-
-                <button class="signup-submit-btn">SignUp!</button>
-
+                <button class="login-submit-btn">Login!</button>
             </form>
         </div>
     </main>
@@ -167,10 +153,9 @@
         </div>
     </footer>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script> -->
     <script src="scripts/accountsManagement.js"></script>
     <script src="scripts/burgerMenu.js"></script>
-    <script src="scripts/signUpForm.js"></script>
+    <script src="scripts/loginForm.js"></script>
 </body>
 
 </html>

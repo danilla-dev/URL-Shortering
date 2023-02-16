@@ -1,5 +1,5 @@
-import './setCurrentMenu.js'
-import './accountsManagement.js'
-import './createElement.js'
 import './burgerMenu.js'
+import './accountsManagement.js'
+import './setCurrentMenu.js'
+import './createElement.js'
 import './getStartedBtns.js'

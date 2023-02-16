@@ -9,6 +9,7 @@ const regExpURl =
 	/^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/
 
 let loggedUser = findLoggedUser()
+let logoutLinks = JSON.parse(localStorage.getItem('Unlogged links')).links
 
 const copyLink = e => {
 	if (e.target.tagName === 'BUTTON') {
@@ -23,6 +24,10 @@ const copyLink = e => {
 			e.target.textContent = 'Copied!'
 		})
 	}
+}
+const shortURL = e => {
+	e.preventDefault()
+	checkURL(input.value)
 }
 
 const checkURL = url => {
@@ -43,7 +48,7 @@ const checkURL = url => {
 const checkLogedStatus = url => {
 	let status = localStorage.getItem('status')
 	if (status === 'true') {
-		checkURLCount(100000000, url)
+		checkURLCount(9999999999, url)
 	} else {
 		checkURLCount(5, url)
 	}
@@ -64,6 +69,7 @@ const getShortenURL = url => {
 			const shortLink = res.data.result.full_short_link
 			const orginalLink = res.data.result.original_link
 			createElement(shortLink, orginalLink)
+			setLinkstoAccount(orginalLink, shortLink)
 		})
 		.catch(err => console.log('ERROR!!'))
 }
@@ -96,41 +102,42 @@ const createElement = (short, orginal) => {
 	orginalLinkDiv.append(orginalLinkText)
 	resultLinkDiv.append(resultLinkText)
 	resultContainer.prepend(newWindow)
-
-	setLinkstoAccount()
 }
 
-const findAndSet = () => {
-	console.log(loggedUser.username)
-	loggedUser.links = resultContainer.innerHTML
-	console.log(users)
+const findAndSet = (long, short) => {
+	const users = JSON.parse(localStorage.getItem('allUsersJson')).users
+	users.forEach(user => {
+		if (user.status == 'true') {
+			let loggedUser 
+			loggedUser = user
+			loggedUser.links.push({ orginal: long, short: short })
+		}
+	})
 	localStorage.setItem('allUsersJson', `{ "users":${JSON.stringify(users)}}`)
 }
 
-const setLinkstoAccount = () => {
+const setLinkstoAccount = (orginal, short) => {
 	if (localStorage.getItem('status') !== 'true') {
-		localStorage.setItem('Your links', resultContainer.innerHTML)
+		logoutLinks.push({ orginal: orginal, short: short })
+		localStorage.setItem('Unlogged links', `{"links":${JSON.stringify(logoutLinks)}}`)
 	} else {
-		findAndSet()
+		findAndSet(orginal, short)
 	}
-}
-const shortURL = e => {
-	e.preventDefault()
-	checkURL(input.value)
 }
 
 const showCurrentLinks = () => {
 	if (localStorage.getItem('status') !== 'true') {
-		const logoutLinks = localStorage.getItem('Your links')
-		resultContainer.innerHTML = logoutLinks
+		logoutLinks.forEach(element => {
+			createElement(element.short, element.orginal)
+		})
 	} else {
-		console.log(loggedUser.username)
 		const userLinks = loggedUser.links
-		resultContainer.innerHTML = userLinks
+		userLinks.forEach(element => {
+			createElement(element.short, element.orginal)
+		})
 	}
 }
 
 shortenBtn.addEventListener('click', shortURL)
 resultContainer.addEventListener('click', copyLink)
-
 window.addEventListener('DOMContentLoaded', showCurrentLinks)
