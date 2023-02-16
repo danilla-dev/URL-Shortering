@@ -9,7 +9,9 @@ const emailRegExp =
 
 // LINK TO PASS REGEXP https://www.thepolyglotdeveloper.com/2015/05/use-regex-to-test-password-strength-in-javascript/
 //
-
+let allUsers = JSON.parse(localStorage.getItem('allUsersJson')).users
+let repeatEmail
+let repeatUsername
 const clearForm = () => {
 	inputs.forEach(input => {
 		input.value = ''
@@ -60,6 +62,8 @@ const clearError = input => {
 }
 
 const checkForm = input => {
+	findRepeatEmail()
+	findRepeatUsername()
 	if (input.value === '') {
 		showError(input, input.placeholder)
 	} else {
@@ -69,7 +73,23 @@ const checkForm = input => {
 const checkEmail = email => {
 	if (!emailRegExp.test(email.value)) {
 		showError(email, 'Incorrect format of email adress')
+	} else if (repeatEmail == true) {
 	}
+}
+
+const findRepeatEmail = () => {
+	allUsers.forEach(user => {
+		if (user.email == email.value) {
+			showError(email, 'User with this email already exist')
+		}
+	})
+}
+const findRepeatUsername = () => {
+	allUsers.forEach(user => {
+		if (user.username == username.value) {
+			showError(username, 'User with this username already exist')
+		}
+	})
 }
 
 submitBtn.addEventListener('click', e => {

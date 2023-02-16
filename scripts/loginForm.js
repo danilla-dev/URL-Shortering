@@ -28,6 +28,7 @@ const checkLoginAndEmail = value => {
 	allUsers.forEach(user => {
 		if (user.username == value || user.email == value) {
 			loggedUser = user
+			clearError(loginInput)
 			checkPassword(passwordInput.value)
 		} else {
 			showError(loginInput, `User not found`)
