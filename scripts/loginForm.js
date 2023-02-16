@@ -5,28 +5,66 @@ const passwordInput = document.querySelector('.password')
 const loginBtn = document.querySelector('.login-submit-btn')
 let loggedUser
 let allUsers = JSON.parse(localStorage.getItem('allUsersJson')).users
+console.log(allUsers.length)
 
-const checkLoginAndEmail = input => {
+const loginUser = () => {
 	allUsers.forEach(user => {
-		if (user.username == input || user.email == input) {
+		if (user == loggedUser) {
+			user.status = 'true'
+		}
+	})
+	localStorage.setItem('status', 'true')
+	localStorage.setItem('allUsersJson', `{ "users":${JSON.stringify(allUsers)}}`)
+	location.href = './'
+}
+
+const findUsers = () => {
+	if (allUsers.length == 0) {
+		alert('No users in memory')
+	}
+}
+
+const checkLoginAndEmail = value => {
+	allUsers.forEach(user => {
+		if (user.username == value || user.email == value) {
 			loggedUser = user
 			checkPassword(passwordInput.value)
 		} else {
-			const loginFormBox = loginInput.parentElement
-			loginFormBox.classList.add('form-error')
+			showError(loginInput, `User not found`)
 		}
 	})
 }
 const checkPassword = input => {
 	if (loggedUser.password == input) {
-		alert('zalogowano')
+		clearError(passwordInput)
+		loginUser()
 	} else {
-		alert('zle haslo')
+		showError(passwordInput, 'Incorrect password')
 	}
+}
+const showError = (input, msg) => {
+	const formBox = input.parentElement
+	const error = formBox.querySelector('.error')
+	formBox.classList.add('form-error')
+	error.textContent = msg
+}
+const clearError = input => {
+	const formBox = input.parentElement
+	formBox.classList.remove('form-error')
+}
+const checkForm = () => {
+	inputs.forEach(input => {
+		if (input.value == '') {
+			showError(input, `Please add correct value`)
+		} else {
+			clearError(input)
+		}
+	})
 }
 
 loginBtn.addEventListener('click', e => {
 	e.preventDefault()
+	checkForm()
+	findUsers()
 	checkLoginAndEmail(loginInput.value)
-	// countErrors()
 })
