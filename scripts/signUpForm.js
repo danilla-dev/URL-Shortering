@@ -1,3 +1,4 @@
+import {setStatusAddUsers} from './accountsManagement.js'
 const submitBtn = document.querySelector('.signup-submit-btn')
 const email = document.querySelector('.email')
 const password = document.querySelector('.password')
@@ -21,10 +22,10 @@ const clearForm = () => {
 const addNewUser = (username, email, password) => {
 	const newUser = `{ "username":"${username}" , "email":"${email}", "password":"${password}", "links":[], "status": "true" }`
 
-	let allUsersJson = JSON.parse(localStorage.getItem('allUsersJson')).users
-	allUsersJson.push(JSON.parse(newUser))
-	localStorage.setItem('allUsersJson', `{"users":${JSON.stringify(allUsersJson)}}`)
-	localStorage.setItem('status', 'true')
+	let allUsers = JSON.parse(localStorage.getItem('allUsersJson')).users
+	allUsers.push(JSON.parse(newUser))
+	
+	setStatusAddUsers('true', allUsers)
 
 	location.href = './'
 	clearForm()

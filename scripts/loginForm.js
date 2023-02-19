@@ -1,3 +1,4 @@
+import {setStatusAddUsers} from './accountsManagement.js'
 const inputs = document.querySelectorAll('input')
 const form = document.querySelector('form')
 const loginInput = document.querySelector('.email')
@@ -13,8 +14,7 @@ const loginUser = () => {
 			user.status = 'true'
 		}
 	})
-	localStorage.setItem('status', 'true')
-	localStorage.setItem('allUsersJson', `{ "users":${JSON.stringify(allUsers)}}`)
+	setStatusAddUsers('true', allUsers)
 	location.href = './'
 }
 
@@ -25,14 +25,13 @@ const findUsers = () => {
 }
 
 const checkLoginAndEmail = value => {
+	showError(loginInput, `User not found`)
 	allUsers.forEach(user => {
 		if (user.username == value || user.email == value) {
 			loggedUser = user
 			clearError(loginInput)
 			checkPassword(passwordInput.value)
-		} else {
-			showError(loginInput, `User not found`)
-		}
+		} 
 	})
 }
 const checkPassword = input => {

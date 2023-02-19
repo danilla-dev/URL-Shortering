@@ -18,11 +18,15 @@ export const logout = () => {
 	users.forEach(user => {
 		user.status = 'false'
 	})
-	localStorage.setItem('status', 'false')
-	localStorage.setItem('allUsersJson', `{ "users":${JSON.stringify(users)}}`)
-
+	setStatusAddUsers('false', users)
 	location.reload()
 }
+
+export const setStatusAddUsers = (status, users) => {
+	localStorage.setItem('status', status)
+	localStorage.setItem('allUsersJson', `{"users":${JSON.stringify(users)}}`)
+}
+
 
 const setDefaultUser = () => {
 	if (localStorage.getItem('allUsersJson') == null) {

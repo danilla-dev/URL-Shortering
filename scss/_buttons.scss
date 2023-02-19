@@ -60,15 +60,16 @@ button:hover {
 	border-radius: 50px;
 	font-size: 2rem;
 	font-weight: 700;
+	transition: background-color 0.3s;
 	background-color: $Cyan;
 	color: #fff;
 	cursor: pointer;
 }
 .login-btn {
-	transition: background-color .3s;
+	transition: color 0.3s;
 	background-color: transparent;
 }
 .login-btn:hover {
-	background-color: $Cyan;
-	color: #fff;
+	color: black;
+	background-color: transparent;
 }

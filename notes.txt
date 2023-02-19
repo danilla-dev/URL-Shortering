@@ -18,8 +18,12 @@
 
 commit -m{
 
-    I fixed bugs with display a account menu when window just load - User had to refrest site two times and then buttons login and signUp was dispaly - chenge in 'findLoggedUser()' in accountManagement.js.I changed the system of render and save windows. Now windows with links just render from a objects not from innerHTML, in this same way i save data to render windows in users memory in local storage. Object 'users' was deleted and i save new users directly to 'users' object in 'allUsersJson' in local storage.I created a new html page to login user.
+  I removed bug with display a error at login input - When function found a correct user, loop go to next user and dispaly error at login input despite the fact that user was found - Change in checkLoginAndEmail at loginForm.js, showError function gone to up of main function.
+  Little code clearing - I created the function setStatusAddUsers at accountManagement.js and add them to loginForm.js and singUpForm.js.
+  Little styles edit.
 
 }
+
+300 dachowka 
 
 

@@ -57,8 +57,12 @@
 		list-style: none;
 		a {
 			padding: 0.5em;
+			transition: color .3s;
 			color: $Gray;
 			text-decoration: none;
+		}
+		a:hover{
+			color: black;
 		}
 	}
 }
