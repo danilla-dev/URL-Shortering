@@ -1,11 +1,14 @@
 # Frontend Mentor - Shortly URL shortening API Challenge solution + Account functionality
 
+## Links
+
+- Live Site URL: [LIVE](https://danillakam.github.io/URL-Shortering/)
+
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -34,10 +37,6 @@ Users should be able to:
 ![](./design/screenshots/footer.png)
 ![](./design/screenshots/mobile_1.png)
 ![](./design/screenshots/login_signup_pages.png)
-
-### Links
-
-- Live Site URL: [LIVE](https://danillakam.github.io/URL-Shortering/)
 
 ## My process
 
