@@ -12,7 +12,7 @@
 		}
 	}
 	.boost-section {
-		background-image: url('../images/bg-boost-desktop.svg');
+		background-image: url('../src/images/bg-boost-desktop.svg');
 		background-size: cover;
 	}
 	.footer {
@@ -83,6 +83,11 @@
 			}
 		}
 	}
+	.boost-section {
+		h4 {
+			font-size: 3.8rem;
+		}
+	}
 	.shorten-results-container {
 		.shorten-result-window {
 			flex-direction: row;
@@ -103,14 +108,14 @@
 	}
 	.advanced-statisctics {
 		padding: 3em;
-		background-image: url('../images/advanced-stat-lg.svg');
+		background-image: url('../src/images/advanced-stat-lg.svg');
 
 		form {
 			flex-direction: row;
 			flex-wrap: wrap;
 			width: calc(100% - 6em);
 			padding: 4.5em;
-			background-image: url('../images/bg-shorten-desktop.svg');
+			background-image: url('../src/images/bg-shorten-desktop.svg');
 			input {
 				margin: 0;
 				order: 1;
@@ -190,7 +195,7 @@
 	}
 	.signup-section,
 	.login-section {
-		background-image: url('../images/advanced-stat-lg.svg');
+		background-image: url('../src/images/advanced-stat-lg.svg');
 		.signup-section-text,
 		.login-section-text {
 			width: 50%;
@@ -205,7 +210,7 @@
 			width: 50%;
 			max-width: 500px;
 		}
-		.login-section-text{
+		.login-section-text {
 			width: 55%;
 		}
 	}

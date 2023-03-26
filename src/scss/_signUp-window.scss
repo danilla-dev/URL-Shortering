@@ -4,7 +4,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-image: url('../images/advanced-stat-sm.svg');
+	background-image: url('../src/images/advanced-stat-sm.svg');
 	background-size: cover;
 	background-position: center;
 	.signup-section-text,
@@ -17,7 +17,8 @@
 		p {
 			color: $Very-Dark-Blue;
 			font-weight: 500;
-			font-size: 1.8rem;
+			font-size: 2rem;
+			text-align: center;
 		}
 	}
 	form {
@@ -62,10 +63,16 @@
 			margin: 1em 0;
 			border: none;
 			border-radius: 10px;
-			background-color: $Cyan;
-			color: #fff;
 			font-size: 1.8rem;
 			font-weight: 700;
+			color: #fff;
+			background-color: $Cyan;
+			transition: background-color 0.3s;
+			cursor: pointer;
+		}
+		.signup-submit-btn:hover,
+		.login-submit-btn:hover {
+			background-color: $Cyan-hover;
 		}
 	}
 }

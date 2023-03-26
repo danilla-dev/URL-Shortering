@@ -5,7 +5,7 @@
 	align-items: center;
 	padding: 2em;
 	background-color: #ececec;
-	background-image: url('../images/advanced-stat-sm.svg');
+	background-image: url('../src/images/advanced-stat-sm.svg');
 	background-size: cover;
 	background-position: center;
 	z-index: 1;
@@ -23,7 +23,7 @@
 		border-radius: 10px;
 		border: 1px solid rgba(0, 0, 0, 0.4);
 		background-color: $Dark-Violet;
-		background-image: url('/images/bg-shorten-mobile.svg');
+		background-image: url('../src/images/bg-shorten-mobile.svg');
 		background-size: 1;
 		background-position: right 0 top 0;
 		background-repeat: no-repeat;

@@ -23,7 +23,7 @@ header nav .nav-bar .burger-btn {
 }
 header nav .nav-bar .burger-btn .fa-bars {
   font-size: 3rem;
-  color: hsl(0deg, 0%, 75%);
+  color: hsl(0, 0%, 75%);
 }
 header .logo {
   padding: 1.5em;
@@ -55,7 +55,7 @@ header .header-text p {
   font-size: 1.8rem;
   font-weight: 500;
   margin: 1.5em 0;
-  color: hsl(0deg, 0%, 75%);
+  color: hsl(0, 0%, 75%);
 }
 header .nav-background {
   position: fixed;
@@ -73,7 +73,7 @@ header .nav-background {
   align-items: center;
   padding: 2em;
   background-color: #ececec;
-  background-image: url("../images/advanced-stat-sm.svg");
+  background-image: url("../src/images/advanced-stat-sm.svg");
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -90,8 +90,8 @@ header .nav-background {
   padding: 2.5em;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.4);
-  background-color: hsl(257deg, 27%, 26%);
-  background-image: url("/images/bg-shorten-mobile.svg");
+  background-color: hsl(257, 27%, 26%);
+  background-image: url("../src/images/bg-shorten-mobile.svg");
   background-size: 1;
   background-position: right 0 top 0;
   background-repeat: no-repeat;
@@ -110,7 +110,7 @@ header .nav-background {
   font-size: 1.2rem;
   font-weight: 400;
   font-style: italic;
-  color: hsl(0deg, 87%, 67%);
+  color: hsl(0, 87%, 67%);
 }
 .advanced-statisctics .advanced-statistics-text {
   margin-top: 10em;
@@ -123,7 +123,7 @@ header .nav-background {
   margin: 1em 0 5em 0;
   font-size: 1.8rem;
   text-align: center;
-  color: hsl(257deg, 7%, 63%);
+  color: hsl(257, 7%, 63%);
   font-weight: 500;
 }
 
@@ -132,8 +132,8 @@ header .nav-background {
   width: 100%;
   height: 280px;
   padding: 5em 2em;
-  background-color: hsl(257deg, 27%, 26%);
-  background-image: url("../images/bg-boost-mobile.svg");
+  background-color: hsl(257, 27%, 26%);
+  background-image: url("../src/images/bg-boost-mobile.svg");
   background-position: center;
   background-size: cover;
 }
@@ -145,7 +145,7 @@ header .nav-background {
 .boost-section h4 {
   top: 35%;
   width: 100%;
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   font-weight: 700;
   text-align: center;
   color: #fff;
@@ -156,14 +156,14 @@ header .nav-background {
 }
 
 .footer-background {
-  background-color: hsl(255deg, 11%, 22%);
+  background-color: hsl(255, 11%, 22%);
+  padding: 2em;
 }
 .footer-background .footer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
-  height: 500px;
 }
 .footer-background .footer h3 {
   font-size: 1.8rem;
@@ -181,11 +181,11 @@ header .nav-background {
 .footer-background .footer a p {
   font-size: 1.4rem;
   text-align: center;
-  color: hsl(0deg, 0%, 75%);
+  color: hsl(0, 0%, 75%);
   transition: color 0.3s;
 }
 .footer-background .footer a p:hover {
-  color: hsl(180deg, 66%, 49%);
+  color: hsl(180, 66%, 49%);
 }
 .footer-background .footer .social-media {
   display: flex;
@@ -200,16 +200,25 @@ header .nav-background {
   color: #fff;
   transition: color 0.3s;
 }
-.footer-background .footer .social-media a .fa-brands:hover {
-  color: hsl(180deg, 66%, 49%);
+.footer-background .footer .social-media a .fa-square-facebook:hover {
+  color: #3b5998;
+}
+.footer-background .footer .social-media a .fa-twitter:hover {
+  color: #1da1f2;
+}
+.footer-background .footer .social-media a .fa-pinterest:hover {
+  color: #c8232c;
+}
+.footer-background .footer .social-media a .fa-instagram:hover {
+  color: #c13584;
 }
 
 button:hover {
-  background-color: hsl(180deg, 54%, 64%);
+  background-color: hsl(180, 54%, 64%);
 }
 
 .shorten-btn:hover {
-  background-color: hsl(180deg, 54%, 64%);
+  background-color: hsl(180, 54%, 64%);
 }
 
 .get-startet-btn {
@@ -222,7 +231,7 @@ button:hover {
   color: white;
   font-size: 1.8rem;
   font-weight: 700;
-  background-color: hsl(180deg, 66%, 49%);
+  background-color: hsl(180, 66%, 49%);
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -234,7 +243,7 @@ button:hover {
   border-radius: 10px;
   font-weight: 700;
   font-size: 1.8rem;
-  background-color: hsl(180deg, 66%, 49%);
+  background-color: hsl(180, 66%, 49%);
   color: #fff;
   transition: background-color 0.3s;
 }
@@ -247,7 +256,7 @@ button:hover {
   border-radius: 5px;
   font-size: 1.8em;
   font-weight: 700;
-  background-color: hsl(180deg, 66%, 49%);
+  background-color: hsl(180, 66%, 49%);
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -272,7 +281,7 @@ button:hover {
   font-size: 2rem;
   font-weight: 700;
   transition: background-color 0.3s;
-  background-color: hsl(180deg, 66%, 49%);
+  background-color: hsl(180, 66%, 49%);
   color: #fff;
   cursor: pointer;
 }
@@ -299,7 +308,7 @@ button:hover {
   height: 70%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: hsl(180deg, 66%, 49%);
+  background-color: hsl(180, 66%, 49%);
   z-index: -100;
 }
 .cards .card {
@@ -321,7 +330,7 @@ button:hover {
   font-size: 1.6em;
   font-weight: 500;
   text-align: center;
-  color: hsl(257deg, 7%, 63%);
+  color: hsl(257, 7%, 63%);
 }
 .cards .card .circle-img {
   position: absolute;
@@ -331,19 +340,19 @@ button:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background-color: hsl(257deg, 27%, 26%);
+  background-color: hsl(257, 27%, 26%);
   background-size: 0.2;
   background-position: center;
   background-repeat: no-repeat;
 }
 .cards .brand-recognition-card .circle-img {
-  background-image: url("../images/icon-brand-recognition.svg");
+  background-image: url("../src/images/icon-brand-recognition.svg");
 }
 .cards .detailed-records-card .circle-img {
-  background-image: url("../images/icon-detailed-records.svg");
+  background-image: url("../src/images/icon-detailed-records.svg");
 }
 .cards .fully-customizable-card .circle-img {
-  background-image: url("../images/icon-fully-customizable.svg");
+  background-image: url("../src/images/icon-fully-customizable.svg");
 }
 
 .shorten-results-container {
@@ -383,7 +392,7 @@ button:hover {
 .shorten-results-container .shorten-result-window .result .result-link {
   font-size: 1.8rem;
   font-weight: 500;
-  color: hsl(180deg, 66%, 49%);
+  color: hsl(180, 66%, 49%);
 }
 
 .menu-window {
@@ -395,7 +404,7 @@ button:hover {
   padding: 2em;
   border-radius: 20px;
   transform: translateX(-50%);
-  background-color: hsl(257deg, 27%, 26%);
+  background-color: hsl(257, 27%, 26%);
   text-align: center;
   transition: left 0.5s;
 }
@@ -417,7 +426,7 @@ button:hover {
   color: white;
 }
 .menu-window .account-list-window {
-  border-top: 1px solid hsl(0deg, 0%, 75%);
+  border-top: 1px solid hsl(0, 0%, 75%);
 }
 .menu-window .account-list-window li p {
   font-size: 1.8rem;
@@ -442,7 +451,7 @@ button:hover {
 .account-list-bar li a {
   padding: 0.5em;
   transition: color 0.3s;
-  color: hsl(0deg, 0%, 75%);
+  color: hsl(0, 0%, 75%);
   text-decoration: none;
 }
 .menu-list-bar li a:hover,
@@ -465,17 +474,17 @@ button:hover {
 }
 
 .input-error input {
-  border: 2px solid hsl(0deg, 87%, 67%);
+  border: 2px solid hsl(0, 87%, 67%);
 }
 .input-error input::-moz-placeholder {
-  color: hsl(0deg, 87%, 67%);
+  color: hsl(0, 87%, 67%);
 }
 .input-error input::placeholder {
-  color: hsl(0deg, 87%, 67%);
+  color: hsl(0, 87%, 67%);
 }
 
 .copied {
-  background-color: hsl(257deg, 27%, 26%);
+  background-color: hsl(257, 27%, 26%);
 }
 
 .signup-section form .form-box.form-error .error,
@@ -484,7 +493,7 @@ button:hover {
 }
 .signup-section form .form-box.form-error input,
 .login-section form .form-box.form-error input {
-  border: 2px solid hsl(0deg, 87%, 67%);
+  border: 2px solid hsl(0, 87%, 67%);
 }
 
 .signup-section,
@@ -493,7 +502,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../images/advanced-stat-sm.svg");
+  background-image: url("../src/images/advanced-stat-sm.svg");
   background-size: cover;
   background-position: center;
 }
@@ -514,9 +523,10 @@ button:hover {
 .signup-section .login-section-text p,
 .login-section .signup-section-text p,
 .login-section .login-section-text p {
-  color: hsl(255deg, 11%, 22%);
+  color: hsl(255, 11%, 22%);
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  text-align: center;
 }
 .signup-section form,
 .login-section form {
@@ -557,7 +567,7 @@ button:hover {
 .login-section form .form-box .error {
   display: none;
   margin-left: 0.2em;
-  color: hsl(0deg, 87%, 67%);
+  color: hsl(0, 87%, 67%);
   font-size: 1.4rem;
   font-style: italic;
 }
@@ -569,10 +579,18 @@ button:hover {
   margin: 1em 0;
   border: none;
   border-radius: 10px;
-  background-color: hsl(180deg, 66%, 49%);
-  color: #fff;
   font-size: 1.8rem;
   font-weight: 700;
+  color: #fff;
+  background-color: hsl(180, 66%, 49%);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.signup-section form .signup-submit-btn:hover,
+.signup-section form .login-submit-btn:hover,
+.login-section form .signup-submit-btn:hover,
+.login-section form .login-submit-btn:hover {
+  background-color: hsl(180, 54%, 64%);
 }
 
 @media (min-width: 576px) {
@@ -587,7 +605,7 @@ button:hover {
     height: 400px;
   }
   .boost-section {
-    background-image: url("../images/bg-boost-desktop.svg");
+    background-image: url("../src/images/bg-boost-desktop.svg");
     background-size: cover;
   }
   .footer h3 {
@@ -652,6 +670,9 @@ button:hover {
     transform: translateX(0%);
     font-size: 2rem;
   }
+  .boost-section h4 {
+    font-size: 3.8rem;
+  }
   .shorten-results-container .shorten-result-window {
     flex-direction: row;
     justify-content: space-between;
@@ -670,14 +691,14 @@ button:hover {
   }
   .advanced-statisctics {
     padding: 3em;
-    background-image: url("../images/advanced-stat-lg.svg");
+    background-image: url("../src/images/advanced-stat-lg.svg");
   }
   .advanced-statisctics form {
     flex-direction: row;
     flex-wrap: wrap;
     width: calc(100% - 6em);
     padding: 4.5em;
-    background-image: url("../images/bg-shorten-desktop.svg");
+    background-image: url("../src/images/bg-shorten-desktop.svg");
   }
   .advanced-statisctics form input {
     margin: 0;
@@ -697,7 +718,7 @@ button:hover {
     font-size: 1.6rem;
   }
   .footer-background {
-    background-color: hsl(255deg, 11%, 22%);
+    background-color: hsl(255, 11%, 22%);
   }
   .footer-background .footer {
     flex-direction: row;
@@ -734,12 +755,12 @@ button:hover {
   .account-list-bar li p {
     display: inline-block;
     margin: 0.3em 1.5em 0 0;
-    color: hsl(255deg, 11%, 22%);
+    color: hsl(255, 11%, 22%);
     font-weight: 700;
   }
   .login-btn {
     font-size: 1.8rem;
-    color: hsl(0deg, 0%, 75%);
+    color: hsl(0, 0%, 75%);
   }
   .signup-btn,
   .logout-btn {
@@ -750,7 +771,7 @@ button:hover {
   }
   .signup-section,
   .login-section {
-    background-image: url("../images/advanced-stat-lg.svg");
+    background-image: url("../src/images/advanced-stat-lg.svg");
   }
   .signup-section .signup-section-text,
   .signup-section .login-section-text,
