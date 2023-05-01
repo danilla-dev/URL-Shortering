@@ -2,7 +2,7 @@
 
 ## Links
 
-- Live Site URL: [LIVE](https://danillakam.github.io/URL-Shortering/)
+- Live Site URL: [LIVE](https://danilla-dev.github.io/URL-Shortering/)
 
 ## Table of contents
 
